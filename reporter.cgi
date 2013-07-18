@@ -26,8 +26,6 @@ senderEmail = form.getvalue('sender', 'no sender address entered')
 senderName = form.getvalue('name', 'no sender name entered')
 
 # Determine which department manager is emailed.
-receiverEmail = ''
-
 if deptName == 'cs':
 	receiverEmail = csEmail
 elif deptName == 'finance':
@@ -42,3 +40,18 @@ else:
 	receiverEmail = 'error'
 
 # Build the message.
+if typeOfPTO == 'future':
+    futurePTO = ' X request approval for the following PTO day(s).'
+    pastPTO = '__ report the following unanticipated/unapproved PTO day(s).'
+else:
+    futurePTO = '__ request approval for the following PTO day(s).'
+    pastPTO = ' X report the following unanticipated/unapproved PTO day(s).'
+
+emailSubject = 'PTO - ' + senderName
+messageText = ('I would like to:\n\n%s\n\n%s\n\nPTO Dates(s) Requested/To Report:\n\n%s - %s\n\nTotal PTO Hours Requested/Reported:\n\n%s'
+                % (futurePTO, pastPTO, fromDate, toDate, hoursRequested))
+
+fullMessage = ('From: %s\r\nTo: %s\r\nCC: %s\r\nSubject: %s\r\n\r\n%s'
+               % (senderEmail, receiverEmail, hrEmail, emailSubject, messageText))
+               
+print fullMessage
