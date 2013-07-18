@@ -1,25 +1,31 @@
 <html>
     <head>
         <link href="style.css" type="text/css" rel="stylesheet">
+        <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/smoothness/jquery-ui.min.css" type="text/css" rel="stylesheet">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript"></script>
         <script src="script.js" type="text/javascript"></script>
     </head>
     
     <body>
         <div id="header">PTO Reporter</div>
         
-        <div id="content">
+        <form id="content" action="reporter.cgi" method="post">
             <div id="type">
-                <select>
-                    <option name="type" value="past">past</option>
-                    <option name="type" value="future">future</option>
-                </select>
+                <input type="radio" name="type" value="future">request approval for the following PTO day(s)
+                <input type="radio" name="type" value="past">report the following unanticipated/unapproved PTO day(s)
             </div>
             
-            <div id="date"></div>
+            <div id="date">
+                <label for="from">from</label>
+                <input id="from" type="text" name="from">
+                <label for="to">to</label>
+                <input id="to" type="text" name="to">
+            </div>
             
-            <div id="hours">
-                <input type="text">
+            <div id="duration">
+                <label for="hours">hours</label>
+                <input id="hours" type="text" name="hours">
             </div>
             
             <div id="department">
@@ -35,7 +41,14 @@
                 <span>tech - system admin</span>
             </div>
             
-            <div id="submit">submit</div>
-        </div>
+            <div id="email">
+                <label for="sender">your email address</label>
+                <input id="sender" type="text" name="sender">
+            </div>
+            
+            <div id="submit">
+                <input type="submit" value="submit">
+            </div>
+        </form>
     </body>
 </html>
