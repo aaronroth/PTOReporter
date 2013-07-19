@@ -49,6 +49,7 @@ emailSubject = 'PTO - ' + senderName
 messageText = ('I would like to:\n\n%s\n\n%s\n\nPTO Dates(s) Requested/To Report:\n\n%s - %s\n\nTotal PTO Hours Requested/Reported:\n\n%s'
                 % (futurePTO, pastPTO, fromDate, toDate, hoursRequested))
 
+<<<<<<< HEAD
 fullMessage = ('From: %s\r\nTo: %s\r\nCc: %s\r\nSubject: %s\r\n\r\n%s'
                % (senderEmail, receiverEmail, hrEmail, emailSubject, messageText))
 
@@ -65,3 +66,9 @@ else:
 			Your PTO form has been submitted to <b>' + receiverEmail + '</b>,<br>\
 			and <b>' + hrEmail + '</b> has been cc\'d in this request/report.\
 		  </p>'
+=======
+fullMessage = ('From: %s\r\nTo: %s\r\nCC: %s\r\nSubject: %s\r\n\r\n%s'
+               % (senderEmail, receiverEmail, hrEmail, emailSubject, messageText))
+               
+print fullMessage
+>>>>>>> 7049693993f1544829a71c6d41324d72dab9f997
