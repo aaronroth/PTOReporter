@@ -15,7 +15,6 @@
 }
 
 form {
-	background-color: white;
 	margin: auto;
 	width: 1000px;
 }
@@ -31,6 +30,10 @@ form {
 	padding: 10px 0px 5px 0px;
 	text-align: center;
 	width: 1000px;
+}
+
+input.error {
+  border: 2px solid #ff0000;
 }
 
 .inputs {

@@ -6,7 +6,6 @@ import os
 csEmail = 'cs@example.com'
 financeEmail = 'finance@example.com'
 hrEmail = 'hr@example.com'
-managementEmail = 'management@example.com'
 programmingEmail = 'programming@example.com'
 sysadminEmail = 'sysadmin@example.com'
 
@@ -28,8 +27,6 @@ if deptName == 'cs':
 	receiverEmail = csEmail
 elif deptName == 'finance':
 	receiverEmail = financeEmail
-elif deptName == 'management':
-	receiverEmail = managementEmail
 elif deptName == 'programming':
 	receiverEmail = programmingEmail
 elif deptName == 'sysadmin':
@@ -62,4 +59,9 @@ pipe.write(fullMessage)
 status = pipe.close()
 
 if status:
-	print 'sendmail exit status', status
+	print 'Error: sendmail exit status', status
+else:
+	print '<p>\
+			Your PTO form has been submitted to <b>' + receiverEmail + '</b>,<br>\
+			and <b>' + hrEmail + '</b> has been cc\'d in this request/report.\
+		  </p>'
