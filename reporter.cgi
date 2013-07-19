@@ -3,11 +3,11 @@
 import cgi
 import os
 
-csEmail = 'aaronroth89@gmail.com'
-financeEmail = 'finance@example.com'
-hrEmail = 'aroth3.quentin@gmail.com'
-programmingEmail = 'programming@example.com'
-sysadminEmail = 'sysadmin@example.com'
+csEmail = 'address@example.com'
+financeEmail = 'address@example.com'
+hrEmail = 'address@example.com'
+programmingEmail = 'address@example.com'
+sysadminEmail = 'address@example.com'
 
 print 'Content-type: text/html'
 print
