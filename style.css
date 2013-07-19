@@ -1,0 +1,56 @@
+.block {
+	display: block;
+}
+
+#button-wrapper {
+	margin: 25px 0px 10px 20px;
+}
+
+#dept-heading {
+	margin: 0px 0px 5px 0px;
+}
+
+.dept-labels {
+	width: 150px;
+}
+
+form {
+	background-color: white;
+	margin: auto;
+	width: 1000px;
+}
+
+#header {
+	background-color: #eaeaea;
+	border-bottom: 1px solid #c1c1c1;
+	border-top: 1px solid #c1c1c1;
+	color: #551a8b;
+	font-size: 28pt;
+	height: 50px;
+	margin: auto;
+	padding: 10px 0px 5px 0px;
+	text-align: center;
+	width: 1000px;
+}
+
+.inputs {
+	margin: 10px 0px 10px 20px;
+}
+
+.labels {
+	font-weight: bold;
+	margin: 20px 0px 10px 10px;
+}
+
+#sub-header {
+	font-style: italic;
+	margin: 15px auto 5px auto;
+	width: 1000px;
+}
+
+#submit-button {
+	cursor: pointer;
+	height: 40px;
+	padding: 5px;
+	width: 75px;
+}

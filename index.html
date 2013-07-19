@@ -10,49 +10,92 @@
     <body>
         <div id="header">PTO Reporter</div>
         
+        <div id="sub-header">
+            We encourage at least two weeks notice for all PTO requests.
+            Unanticipated absences must be reported as PTO upon your return
+            to the office. PTO can only be taken in half day increments.
+            Your manager will add your PTO to your department's calendar.
+        </div>
+        
         <form id="content" action="reporter.cgi" method="post">
-            <div id="type">
-                <input type="radio" name="type" value="future">request approval for the following PTO day(s)
-                <input type="radio" name="type" value="past">report the following unanticipated/unapproved PTO day(s)
+            <div class="labels">
+                I would like to:
             </div>
             
-            <div id="date">
+            <div id="type" class="inputs">
+                <div class="block">
+                    <input type="radio" name="type" value="future">
+                    <span>request approval for the following PTO day(s)</span>
+                </div>
+                
+                <div class="block">
+                    <input type="radio" name="type" value="past">
+                    <span>report the following unanticipated/unapproved PTO day(s)</span>
+                </div>
+            </div>
+            
+            <div class="labels">
+                PTO Date(s) Requested/To Report:
+            </div>
+            
+            <div id="date" class="inputs">
                 <label for="from">from</label>
                 <input id="from" type="text" name="from">
                 <label for="to">to</label>
                 <input id="to" type="text" name="to">
             </div>
             
-            <div id="duration">
+            <div class="labels">
+                Total PTO Hours Requested/Reported:
+            </div>
+            
+            <div id="duration" class="inputs">
                 <label for="hours">hours</label>
                 <input id="hours" type="text" name="hours">
             </div>
             
-            <div id="department">
-                <input type="radio" name="dept" value="cs">
-                <span>customer service</span>
-                <input type="radio" name="dept" value="finance">
-                <span>finance</span>
-                <input type="radio" name="dept" value="management">
-                <span>management</span>
-                <input type="radio" name="dept" value="programming">
-                <span>tech - coder</span>
-                <input type="radio" name="dept" value="sysadmin">
-                <span>tech - system admin</span>
+            <div class="labels">
+                Your Info:
             </div>
             
-            <div id="name">
-                <label for="name">your name (First Last)</label>
+            <div id="name" class="inputs">
+                <label for="name">name (First Last)</label>
                 <input id="name" type="text" name="name">
             </div>
             
-            <div id="email">
-                <label for="sender">your email address</label>
+            <div id="email" class="inputs">
+                <label for="sender">email address</label>
                 <input id="sender" type="text" name="sender">
             </div>
             
-            <div id="submit">
-                <input type="submit" value="submit">
+            <div id="department" class="inputs">
+                <div id="dept-heading">
+                    department
+                </div>
+                
+                <div class="dept-labels">
+                    <input type="radio" name="dept" value="cs">
+                    <span>customer service</span>
+                </div>
+                
+                <div class="dept-labels">
+                    <input type="radio" name="dept" value="finance">
+                    <span>finance</span>
+                </div>
+                
+                <div class="dept-labels">
+                    <input type="radio" name="dept" value="programming">
+                    <span>tech - coder</span>
+                </div>
+                
+                <div class="dept-labels">
+                    <input type="radio" name="dept" value="sysadmin">
+                    <span>tech - system admin</span>
+                </div>
+            </div>
+            
+            <div id="button-wrapper">
+                <input id="submit-button" type="submit" value="submit">
             </div>
         </form>
     </body>
