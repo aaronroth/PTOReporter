@@ -1,7 +1,5 @@
-/*
- Copyright (c) 2013 Aaron Roth
- See the file LICENSE for copying permission.
-*/
+// Copyright (c) 2013 Aaron Roth
+// See the file LICENSE for copying permission.
 
 $(document).ready(function() {	
 	$('#from').datepicker({
